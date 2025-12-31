@@ -60,7 +60,7 @@ def draw_wind_rose(ax, center_x, center_y, wind_dir, wind_power):
     radius = 12
     ax.add_patch(Circle((center_x, center_y), radius, color='white', alpha=0.1, zorder=10))
     
-    for label, angle in [('N', 0), ('NO', 315),('E', 90),('SE',135), ('S', 180), ('O', 270)]:
+    for label, angle in [('N', 0), ('SO',225),('NE',45),('NO', 315),('E', 90),('SE',135), ('S', 180), ('O', 270)]:
         rad = np.radians(angle)
         lx = center_x + radius * 1.5 * np.sin(rad)
         ly = center_y + radius * 1.5 * np.cos(rad)
