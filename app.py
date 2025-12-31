@@ -50,7 +50,7 @@ path_lagune = get_organic_path(nodes_lagune)
 
 # --- INITIALISATION ---
 if 'x' not in st.session_state or start_btn:
-    st.session_state.x = np.random.normal(60, 7, nb_larves)
+    st.session_state.x = np.random.normal(60, 4, nb_larves)
     st.session_state.y = np.random.normal(50, 16, nb_larves)
     st.session_state.status = np.zeros(nb_larves)
     st.session_state.depth = np.zeros(nb_larves)
