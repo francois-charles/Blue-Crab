@@ -91,7 +91,7 @@ def draw_map(x, y, status, step, wind_dir, wind_power):
     ax.scatter(x[status==0], y[status==0], s=12, c='white', alpha=0.6, zorder=5)
     
     # Particules - PETITS CRABES (Status 1)
-    ax.scatter(x[status==1], y[status==1], s=60,lw=0.2, marker=crab_marker, c=OR_RECRUT, edgecolors='white', zorder=6)
+    ax.scatter(x[status==1], y[status==1], s=60,lw=0.2, c=OR_RECRUT, edgecolors='white', zorder=6)
     
     # Échouages (Status 2)
     ax.scatter(x[status==2], y[status==2], s=15, c='#ef233c', marker='x', alpha=0.4, zorder=4)
