@@ -19,8 +19,8 @@ st.set_page_config(page_title="Simulation Dispersion Canet", layout="wide")
 # --- STYLE ET COULEURS ---
 BLEU_MER = '#003554'
 VERT_TERRE = '#1b4332'
-# OR_RECRUT = '#ffbc42'
-OR_RECRUT='blue'
+OR_RECRUT = '#ffbc42'
+#OR_RECRUT='blue'
 CYAN_LARGE = '#003554'#'#00f5d4'
 SABLE = '#e9c46a'
 
@@ -207,16 +207,15 @@ def draw_map(x, y, status, step, wind_dir, wind_power):
     #ax.scatter(x[status==1], y[status==1], s=100,lw=0.7, marker=crab_marker, c=OR_RECRUT, edgecolors='w',alpha=0.6, zorder=6)
 # Affichage des crabes
     ax.scatter(x[status==1], y[status==1], 
-               s=250,          # On augmente la taille pour laisser la place aux longues pattes
-               lw=0.5,         # Trait ultra-fin
-               marker=get_crab_marker(), 
-               c='blue',       # Couleur de remplissage
+               s=12,          # On augmente la taille pour laisser la place aux longues pattes
+                      # Trait ultra-fin          
+               c=OR_RECRUT,       # Couleur de remplissage
                edgecolors='white', 
                alpha=0.8,      # Un peu de transparence aide quand ils se chevauchent
                zorder=6)
     
     # Échouages (Status 2)
-    ax.scatter(x[status==2], y[status==2], s=15, c='#ef233c', marker='x', alpha=0.4, zorder=4)
+    ax.scatter(x[status==2], y[status==2], s=15, c='white', marker='x', alpha=0.4, zorder=4)
 
     draw_wind_rose(ax, 115, 85, wind_dir, wind_power)
     ax.set_xlim(-5, 140)
