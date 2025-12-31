@@ -11,8 +11,8 @@ st.set_page_config(page_title="Simulation Dispersion Canet", layout="wide")
 # --- STYLE ET COULEURS ---
 BLEU_MER = '#003554'
 VERT_TERRE = '#1b4332'
-# OR_RECRUT = '#ffbc42'
-OR_RECRUT='blue'
+OR_RECRUT = '#ffbc42'
+#OR_RECRUT='blue'
 CYAN_LARGE = '#00f5d4'
 SABLE = '#e9c46a'
 
@@ -91,7 +91,7 @@ def draw_map(x, y, status, step, wind_dir, wind_power):
     ax.scatter(x[status==0], y[status==0], s=12, c='white', alpha=0.6, zorder=5)
     
     # Particules - PETITS CRABES (Status 1)
-    ax.scatter(x[status==1], y[status==1], s=60,lw=0.2, c=OR_RECRUT, edgecolors='white', zorder=6)
+    ax.scatter(x[status==1], y[status==1], s=12, c=OR_RECRUT, edgecolors='white', zorder=6)
     
     # Échouages (Status 2)
     ax.scatter(x[status==2], y[status==2], s=15, c='#ef233c', marker='x', alpha=0.4, zorder=4)
