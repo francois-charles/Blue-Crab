@@ -18,7 +18,7 @@ st.set_page_config(page_title="Simulation Dispersion Canet", layout="wide")
 
 # --- STYLE ET COULEURS ---
 BLEU_MER = '#003554'
-VERT_TERRE = '#1b4332'
+VERT_TERRE = '#00f5d4'#'#1b4332'
 OR_RECRUT = '#ffbc42'
 #OR_RECRUT='blue'
 CYAN_LARGE = '#003554'#'#00f5d4'
